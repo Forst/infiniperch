@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Infiniperch</title>
+<style>
+	body {
+		background-color: #232158;
+		/* background: linear-gradient(180deg, rgba(5,0,97,1) 0%, rgba(0,112,172,1) 40%, rgba(255,143,0,1) 100%);
+		background-attachment: fixed !important;
+		background-size: 100vw 100vh; */
+	}
+	div {
+		margin-left: auto;
+		margin-right: auto;
+		width: 75%;
+		max-width: 640px;
+		background-image: url('chee.webp');
+		background-repeat: repeat-y;
+		background-position-x: center;
+		background-position-y: top;
+		background-size: contain;
+	}
+</style>
+</head>
+<body>
+<div style="height: 500vh;"></div>
+</body>
+<script>
+const body = document.getElementsByTagName('div')[0];
+let height = 500;
+
+function increaseHeight() {
+	height += 500;
+	body.style.height = `${height}vh`;
+}
+
+window.addEventListener('scroll', function() {
+  if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+    increaseHeight();
+  }
+});
+</script>
+</html>
